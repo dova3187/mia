@@ -1,0 +1,30 @@
+# Mi cueva difícil: el Wumpus bloquea el único camino seguro hacia el oro
+# (4x4, agente en [1,1] mirando al este)
+
+grid:
+  width: 4
+  height: 4
+
+agent:
+  start: [1, 1]
+  direction: east
+  arrows: 1
+
+# El Wumpus está en el único corredor hacia el oro
+wumpus: [3, 2]
+
+pits:
+  - [2, 3]
+  - [3, 4]
+  - [4, 3]
+
+# Oro alcanzable solo pasando por [2,1] (que contiene al Wumpus)
+gold: [3, 3]
+
+scoring:
+  gold: 1000
+  death: -1000
+  step: -1
+  shoot: -10
+
+max_steps: 200
